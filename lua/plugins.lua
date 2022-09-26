@@ -32,6 +32,8 @@ return packer.startup(function(use)
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-compe'
+  use 'glepnir/dashboard-nvim'
   use {
     'nvim-telescope/telescope.nvim', tag='0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
