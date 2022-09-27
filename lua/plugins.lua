@@ -28,17 +28,24 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
-
+  use "preservim/nerdtree"
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-compe'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
   use 'glepnir/dashboard-nvim'
   use {
     'nvim-telescope/telescope.nvim', tag='0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-
+  use {
+   'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
   use 'folke/tokyonight.nvim'
   use 'ellisonleao/gruvbox.nvim'
   use 'EdenEast/nightfox.nvim'
