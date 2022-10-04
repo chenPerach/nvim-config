@@ -1,5 +1,20 @@
 local cmp = require('cmp')
 
+local function cmp_get_prev(fallback)
+    if cmp.visible() then
+        cmp.select_prev_item()
+        return
+    end
+    fallback()
+end
+
+local function cmp_get_next(fallback)
+    if cmp.visible() then
+        cmp.select_next_item()
+        return
+    end
+end
+
 cmp.setup({
     snippet = {
       -- REQUIRED - you must specify a snippet engine
@@ -20,9 +35,11 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<Tab>'] = cmp.mapping(cmp_get_next, { 'i', 'c' }),
+        ['<S-Tab>'] = cmp.mapping(cmp_get_prev, {'i' , 'c'}),
     }),
     sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
+        -- { name = 'nvim_lsp' },
         -- { name = 'vsnip' }, -- For vsnip users.
         -- { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
@@ -59,9 +76,3 @@ cmp.setup.cmdline(':', {
     })
 })
 
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-    require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-    capabilities = capabilities
-}

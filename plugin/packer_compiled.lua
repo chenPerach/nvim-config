@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/chen/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/chen/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -129,11 +124,6 @@ _G.packer_plugins = {
     path = "/home/chen/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/chen/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
   ["nyoom.nvim"] = {
     loaded = true,
     path = "/home/chen/.local/share/nvim/site/pack/packer/start/nyoom.nvim",
@@ -173,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/chen/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/chen/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 
