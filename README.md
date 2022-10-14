@@ -21,11 +21,17 @@ This repo hosts my Nvim configuration for Linux
 
 # Shortcuts
 
-Some of the shortcuts I use frequently are listed here. In the following shortcuts, `<leader>` represents ASCII character `,`.
+Some of the shortcuts I use frequently are listed here. 
 
-| Shortcut          | Mode          | platform        | Description                                                              |
-|-------------------|---------------|-----------------|--------------------------------------------------------------------------|
-| `<leader>ff`      | Normal        | Linux           | Fuzzy file searching in a floating window                                |
+| Shortcut          | Mode          | Description                                                              |
+|-------------------|---------------|--------------------------------------------------------------------------|
+| `<space>ff`       | Normal        | Fuzzy file searching in a floating window                                |
+| `<C-n>`           | Normal/Insert | Next buffer                                                              |
+| `<C-p>`           | Normal/Insert | Previous buffer                                                          |
+| `<C-s>`           | Normal/Insert | Save all open files                                                      |
+| `<Tab>`           | Auto Completion | Next auto-completion option                                            |
+| `<S-Tab>`         | Auto Completion | Previous auto-completion option                                        |
+| `<space>h`        | Normal        | execute `noh`                                                            |
 
 # Contributing
 
