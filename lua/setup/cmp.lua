@@ -8,6 +8,7 @@ local function cmp_get_prev(fallback)
     fallback()
 end
 
+
 local function cmp_get_next(fallback)
     if cmp.visible() then
         cmp.select_next_item()
@@ -32,14 +33,14 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-x>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        ['<Tab>'] = cmp.mapping(cmp_get_next, { 'i', 'c' }),
-        ['<S-Tab>'] = cmp.mapping(cmp_get_prev, {'i' , 'c'}),
+        ['<C-n>'] = cmp.mapping(cmp_get_next, { 'c', 'i' }),
+        ['<C-p>'] = cmp.mapping(cmp_get_prev, {'c', 'i'}),
     }),
     sources = cmp.config.sources({
-        -- { name = 'nvim_lsp' },
+         { name = 'nvim_lsp' },
         -- { name = 'vsnip' }, -- For vsnip users.
         -- { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.

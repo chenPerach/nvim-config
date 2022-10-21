@@ -6,3 +6,4 @@ require('setup.dashboard')
 require('setup.lualine')
 require('keybindings')
 require('general')
+
